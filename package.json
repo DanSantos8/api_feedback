@@ -1,0 +1,38 @@
+{
+	"name": "node",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/loader.js",
+	"scripts": {
+		"dev": "nodemon",
+		"production": "pm2 start process.json -u top-touch --env production",
+		"staging": "pm2 start process.json -u top-touch-staging --env staging",
+		"start": "node src/loader.js",
+		"debug": "node src/loader.js --inspect"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.17.1",
+		"bcrypt": "^3.0.1",
+		"body-parser": "^1.15.2",
+		"cron": "^1.5.0",
+		"dotenv": "^4.0.0",
+		"express": "^4.14.0",
+		"express-query-int": "^1.0.1",
+		"express-validator": "^5.3.0",
+		"formidable": "^1.1.1",
+		"helmet": "^3.12.0",
+		"jsonwebtoken": "^5.7.0",
+		"knex": "^0.14.4",
+		"lodash": "^4.17.4",
+		"md5": "^2.2.1",
+		"moment": "^2.19.2",
+		"mysql": "^2.16.0",
+		"querystring": "^0.2.0",
+		"uuid": "^3.3.2"
+	},
+	"devDependecies": {
+		"nodemon": "^1.11.0"
+	}
+}
