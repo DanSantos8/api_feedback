@@ -5,8 +5,15 @@ const { checkErrors} = require('../../utils/functions')
 
 module.exports = express =>{
 	var router = express.Router()
+	
+	router.get('/', async (req, res, next) => {
+		
+		req.data = 'API Feedback';
+		return next();
+		
+	});
 
-	router.post('/', async (req, res, next) => {
+	router.post('/feedback', async (req, res, next) => {
 
 		try{
 
@@ -49,6 +56,7 @@ module.exports = express =>{
 
 			}
 
+			req.data = 1;
 
 			return next()
 

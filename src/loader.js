@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv-flow').config();
 
 const server  = require('./config/server')
 const errorHandler = require('./config/error')
